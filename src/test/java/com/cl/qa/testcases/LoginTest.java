@@ -1,21 +1,16 @@
 package com.cl.qa.testcases;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.cl.qa.base.TestBase;
-import com.cl.qa.pages.HomePage;
 import com.cl.qa.pages.LoginPage;
-
 import org.testng.Assert;
 
-/*import net.jodah.failsafe.internal.util.Assert;*/
 
 public class LoginTest extends TestBase {
 
 	LoginPage loginpage;
-	HomePage homepage;
+	
 
 	public LoginTest() {
 
@@ -30,28 +25,19 @@ public class LoginTest extends TestBase {
 		loginpage = new LoginPage();
 	}
 
-	@Test(priority = 2)
-	public void loginpagetitle() {
-
-	String Title=loginpage.validatingthenloginpagetitle();
+	@Test(enabled=false)
+	public void pagetitle() {
+    String title= loginpage.pagetitle();
 	
-	Assert.assertEquals(Title, "My Account – Automation Practice Site");
+	Assert.assertEquals(title, "PHPTRAVELS booking script and system for hotels airline flights tours cars online application - PHPTRAVELS");
 
 	}
 	
-	@Test(priority = 1)
-	public void CheckUserNamePassword(){
-		
-	String name=loginpage.Login(prop.getProperty("username"), prop.getProperty("password"));
-
-		Assert.assertEquals(name,"venkatteja.adurty");
+	@Test(priority =1)
+	public void homepage_test()
+	{
+		loginpage.homepage_clicks();
 	}
 
-	@AfterMethod
-	public void teardown() {
-
-		driver.quit();
-
-	}
-
+	
 }

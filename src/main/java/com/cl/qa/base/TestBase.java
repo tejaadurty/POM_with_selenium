@@ -8,6 +8,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 
 	public static WebDriver driver;
@@ -36,9 +38,11 @@ public class TestBase {
 		String browsername=prop.getProperty("browser");
 		if(browsername.equals("chrome")) {
 			
+			WebDriverManager.chromedriver().setup();
+	
 			
-			System.setProperty("webdriver.chrome.driver",
-					"C:/Users/1030205/Downloads/chromedriver_win32latest/chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver",
+					//"C:/Users/1030205/Downloads/chromedriver_win32latest/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		driver.manage().window().maximize();

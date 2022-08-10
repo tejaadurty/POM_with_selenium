@@ -5,8 +5,7 @@
     <classes>
       <class name="com.cl.qa.testcases.LoginTest">
         <methods>
-          <include name="loginpagetitle"/>
-          <include name="teardown"/>
+          <include name="homepage_test"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.cl.qa.testcases.LoginTest -->

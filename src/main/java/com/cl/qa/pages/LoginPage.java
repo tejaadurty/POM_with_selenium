@@ -1,27 +1,30 @@
 package com.cl.qa.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.cl.qa.base.TestBase;
+import com.cl.qa.util.AbstractCommands;
 
 public class LoginPage extends TestBase {
 
 	// Page Factory - OR(Object Repository)
 	// @FindBy(name = "email")
-	@FindBy(xpath = "//*[@id='username']")
-	WebElement username;
-
-	// @FindBy(name = "password")
-	@FindBy(xpath = "//*[@id='password']")
-	WebElement password;
-
-	@FindBy(xpath = "//*[contains(@name,'login')][2]")
-	WebElement Loginbtn;
-
-	@FindBy(xpath = "//*[text()='venkatteja.adurty']")
-	WebElement name;
+	@FindBy(xpath = "//a[text()='Login']")
+	WebElement loginbutton;
+	@FindBy(xpath = "//a[text()='Demo']")
+	WebElement Demobutton;
+	@FindBy(xpath = "//a[text()='Pricing']")
+	WebElement Pricingbutton;
+	@FindBy(xpath="//div[@class='dropdown-content featuresDropdown']/preceding::span[text()='Features']")
+	WebElement features;
+	
+	@FindBy(xpath="//a[text()='Flights Module']")
+	WebElement flightmodule;
+	
 
 	// Initializing the page objects
 	public LoginPage() {
@@ -30,22 +33,37 @@ public class LoginPage extends TestBase {
 		// the current class objects.
 
 	}
-
-	// Actions: Features available at login page
-	public String validatingthenloginpagetitle() {
-
-		return driver.getTitle();
-
+	
+	
+	
+	public String pagetitle()
+	{
+	String title=driver.getTitle();
+	System.out.println(title);
+	return title;
+	
+	}
+	public void homepage_clicks()
+	{
+		loginbutton.click();
+		AbstractCommands.switchtomainwindow();
+		//driver.navigate().back();
+		AbstractCommands.waiting(2);
+		Demobutton.click();
+		AbstractCommands.waiting(1);
+		
+		Pricingbutton.click();
+		AbstractCommands.waiting(10);
+		
+		features.click();
+		Actions action= new Actions(driver);
+		action.moveToElement(flightmodule).click().perform();
+			
+		
 	}
 
-	public String Login(String Username, String Password) {
 
-		username.sendKeys(Username);
-		password.sendKeys(Password);
-		Loginbtn.click();
-		String personname = name.getText();
-		return personname;
 
-	}
+	
 
 }

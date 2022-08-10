@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Sample_test" duration-ms="65292" started-at="2022-08-10T13:05:54Z" finished-at="2022-08-10T13:06:59Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="65292" started-at="2022-08-10T13:05:54Z" finished-at="2022-08-10T13:06:59Z">
+      <class name="com.cl.qa.testcases.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cl.qa.testcases.LoginTest@6ea12c19]" name="setUp" is-config="true" duration-ms="12660" started-at="2022-08-10T13:06:21Z" finished-at="2022-08-10T13:06:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="homepage_test()[pri:1, instance:com.cl.qa.testcases.LoginTest@6ea12c19]" name="homepage_test" duration-ms="24599" started-at="2022-08-10T13:06:34Z" finished-at="2022-08-10T13:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepage_test -->
+      </class> <!-- com.cl.qa.testcases.LoginTest -->
+      <class name="com.cl.qa.testcases.SignUpTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cl.qa.testcases.SignUpTest@5afa04c]" name="setUp" is-config="true" duration-ms="13059" started-at="2022-08-10T13:05:54Z" finished-at="2022-08-10T13:06:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clickonsignup()[pri:0, instance:com.cl.qa.testcases.SignUpTest@5afa04c]" name="clickonsignup" duration-ms="171" started-at="2022-08-10T13:06:07Z" finished-at="2022-08-10T13:06:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickonsignup -->
+        <test-method status="PASS" signature="Enter_personalinfo()[pri:1, instance:com.cl.qa.testcases.SignUpTest@5afa04c]" name="Enter_personalinfo" duration-ms="13974" started-at="2022-08-10T13:06:07Z" finished-at="2022-08-10T13:06:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Enter_personalinfo -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.cl.qa.testcases.SignUpTest@5afa04c]" name="teardown" is-config="true" duration-ms="791" started-at="2022-08-10T13:06:58Z" finished-at="2022-08-10T13:06:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.cl.qa.testcases.SignUpTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Sample_test -->
+</testng-results>
